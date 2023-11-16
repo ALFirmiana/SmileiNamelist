@@ -58,4 +58,17 @@ Main(
 - `simulation_time` or `number_of_steps`
   模拟时长，可选两个参数：
   - `simulation_time`：模拟时长
-  - `number_of_steps`
+  - `number_of_steps`：模拟步数
+
+- `timestep` or `timestep_over_CFL`
+  时间步长，可选两个参数：
+  - `timestep`：时间步长，归一化单位
+  - `timestep_over_CFL`：时间不长，*Courant-Friedrichs-Lewy*(CFL)时间单位
+
+- `gpu_computing`
+  是否使用GPU加速，可选参量为
+  1. **`False`**：不启用
+  2. **`True`**：启用
+
+- `number_of_patches`
+  参量为长度等同于维数的整形列表，代表每个方向上划分的patches数。举例来说，对于二维模拟，参量为`[nx,ny]`，要求nx、ny均为2的整数次幂，且划分总数$nx*ny$大于等于并行线程数

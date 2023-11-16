@@ -31,18 +31,23 @@ Main(
 ```
 
 - `geometry`
-  模拟维数，可选参数为
-  - `1Dcartesian`：1维(x)
-  - `2Dcartesion`：2维(x,y)
-  - `3Dcartesion`：3维(x,y,z)
-  - `AMcylindrical`：方位模分解的柱坐标(x,r)
+  模拟维数，可选参量为
+  1. `1Dcartesian`：1维(x)
+  1. `2Dcartesion`：2维(x,y)
+  1. `3Dcartesion`：3维(x,y,z)
+  1. `AMcylindrical`：方位模分解的柱坐标(x,r)
 
 - `interpolation_order`
-  插值阶数，可选参数为
-  - **`2`**^[加粗为默认值，下略]：2阶插值多项式，三点法
-  - `4`：4阶插值多项式，五点法，向量化2维几何模拟不可用
+  插值阶数，可选参量为
+  1. **`2`**^[加粗为默认值，下略]：2阶插值多项式，三点法
+  1. `4`：4阶插值多项式，五点法，向量化2维几何模拟不可用
 
 - `interpolator`
-  插值算法，可选参数为
-  - **`monentum-conserving`**：
-  - `wt`:一种随时间步长的插值算法^[https://doi.org/10.1016/j.jcp.2020.109388]
+  插值算法，可选参量为
+  1. **`monentum-conserving`**：不知道
+  1. `wt`:一种随时间步长的插值算法^[https://doi.org/10.1016/j.jcp.2020.109388]
+
+- `grid_length` or `number_of_cells`
+  参量为长度等同于维数的列表，代表模拟空间的大小，可选两个参数：
+  - `grid_length`：
+  

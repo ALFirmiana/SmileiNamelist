@@ -45,9 +45,17 @@ Main(
 - `interpolator`
   插值算法，可选参量为
   1. **`monentum-conserving`**：不知道
-  1. `wt`:一种随时间步长的插值算法^[https://doi.org/10.1016/j.jcp.2020.109388]
+  1. `wt`:一种随时间步长的插值算法^[<https://doi.org/10.1016/j.jcp.2020.109388>]
 
 - `grid_length` or `number_of_cells`
   参量为长度等同于维数的列表，代表模拟空间的大小，可选两个参数：
-  - `grid_length`：
+  - `grid_length`：每个维度方向的长度^[使用的归一化单位参考<https://smileipic.github.io/Smilei/Understand/units.html>，下略]
+  - `number_of_cells`：每个维度方向的网格数
   
+- `cell_length`
+  参量为长度等同于维数的浮点数列表，代表每个网格的大小
+
+- `simulation_time` or `number_of_steps`
+  模拟时长，可选两个参数：
+  - `simulation_time`：模拟时长
+  - `number_of_steps`

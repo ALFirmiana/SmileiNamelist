@@ -68,7 +68,21 @@ Main(
 - `gpu_computing`
   是否使用GPU加速，可选参量为
   1. **`False`**：不启用
-  2. **`True`**：启用
+  2. `True`：启用
 
 - `number_of_patches`
   参量为长度等同于维数的整形列表，代表每个方向上划分的patches数。举例来说，对于二维模拟，参量为`[nx,ny]`，要求nx、ny均为2的整数次幂，且划分总数$nx*ny$大于等于并行线程数
+
+- `patch_arrangment`
+  patches的划分和遍历方式，可选参量为
+  1. **`hilbertian`**：以hilbert曲线填充
+  2. `linearized_XY`（2维） or `linearized_XYZ`（3维）：行向量为主（C语言风格）线性划分
+  3. `linearized_YZ`（2维） or `linearized_ZYX`（3维）：列向量为主（Fortran风格）线性划分
+
+- `cluster_width`
+  不知道
+
+- `maxwell_solver`
+  maxwell方程解法，根据模拟维数不同，可选参数也不同
+  - 2维：
+    1.
